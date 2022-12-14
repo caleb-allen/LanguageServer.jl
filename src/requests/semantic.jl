@@ -100,7 +100,8 @@ function maybe_get_token_from_expr(ex::EXPR, state::ExpressionVisitorState, offs
         char,
         ex.span,
         semantic_token_encoding(kind),
-        0)
+        0, # TODO use modifiers (see SemanticTokenModifiersKinds )
+    )
 end
 
 

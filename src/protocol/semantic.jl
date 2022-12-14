@@ -1,28 +1,43 @@
 # https://microsoft.github.io/language-server-protocol/specifications/specification-3-17/#textDocument_semanticTokens
 const SemanticTokenKind = String
 const SemanticTokenKinds = (
+    Namespace="namespace",
+    Type="type",
+    Class="class",
+    Enum="enum",
+    Interface="interface",
     Struct="struct",
     TypeParameter="typeParameter",
     Parameter="parameter",
     Variable="variable",
     Property="property",
+    EnumMember="enumMember",
+    Event="event",
     Function="function",
+    Method="method",
     Macro="macro",
     Keyword="keyword",
+    Modifier="modifier",
     Comment="comment",
     String="string",
     Number="number",
     Regexp="regexp",
     Operator="operator",
+    Decorator="decorator",
 )
 
 const SemanticTokenModifiersKind = String
 const SemanticTokenModifiersKinds = (
     Declaration="declaration",
     Definition="definition",
+    Readonly="readonly", # TODO felipe use `const` with this
+    Static="static", # TODO felipe use top-level variables with this
+    Deprecated="deprecated",
+    Abstract="abstract",
+    Async="async",
     Modification="modification",
     Documentation="documentation",
-    DefaultLibrary="defaultLibrary",
+    DefaultLibrary="defaultLibrary"
 )
 
 
